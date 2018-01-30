@@ -30,4 +30,20 @@ public class Room {
     public String getOccupantName() {
         return occupantName;
     }
+
+
+    public boolean setOccupant(String guestName, int numDays) {
+        boolean success = false;
+
+        if (this.occupantName.equals(null)) success = false;
+        else {
+            this.occupantName += guestName;
+            this.daysRented = numDays;
+            success = true;
+        }
+
+        return success;
+    }
+
 }
+
